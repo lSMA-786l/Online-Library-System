@@ -1,0 +1,212 @@
+body {
+  background: #101010;
+  margin: 0;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  color: #fffbe7;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #181818;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 8px;
+}
+
+.home-container, .browse-container, .addbook-container, .details-container, .notfound-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #181818;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.08);
+  padding: 2.5rem 2rem;
+  border: 1.5px solid #FFD700;
+}
+
+.category-list li a {
+  background: #FFD700;
+  color: #181818;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.10);
+}
+.category-list li a:hover {
+  background: #FFC107;
+  color: #fffbe7;
+  box-shadow: 0 4px 16px #FFD700;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  justify-content: flex-start;
+}
+
+.book-card {
+  background: #181818;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.13);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1.5px solid #FFD700;
+  color: #fffbe7;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+}
+.book-card:hover {
+  box-shadow: 0 8px 32px #FFD700;
+  border: 2.5px solid #FFC107;
+  transform: translateY(-4px) scale(1.03);
+}
+.book-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+  color: #FFD700;
+}
+.book-author, .book-category, .book-rating {
+  font-size: 1.08rem;
+  color: #fffbe7;
+  margin-bottom: 0.4rem;
+}
+.details-btn, .back-btn, .addbook-form button {
+  background: #FFD700;
+  color: #181818;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 0.7rem;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.10);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.details-btn:hover, .back-btn:hover, .addbook-form button:hover {
+  background: #FFC107;
+  color: #fffbe7;
+  box-shadow: 0 4px 16px #FFD700;
+}
+.search-bar {
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border: 1.5px solid #FFD700;
+  background: #181818;
+  color: #fffbe7;
+  font-size: 1.08rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.search-bar::placeholder {
+  color: #FFD700;
+  opacity: 0.8;
+}
+.search-bar:focus {
+  border: 2px solid #FFC107;
+  outline: none;
+  box-shadow: 0 2px 8px #FFD700;
+}
+.addbook-form input, .addbook-form textarea, .addbook-form select {
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  border: 1.5px solid #FFD700;
+  font-size: 1.08rem;
+  background: #101010;
+  color: #fffbe7;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.addbook-form input:focus, .addbook-form textarea:focus, .addbook-form select:focus {
+  border: 2px solid #FFC107;
+  outline: none;
+  box-shadow: 0 2px 8px #FFD700;
+}
+.addbook-form textarea {
+  min-height: 90px;
+}
+.error-msg {
+  color: #FFD700;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.notfound-container {
+  text-align: center;
+  background: #101010;
+  color: #FFD700;
+  border-radius: 18px;
+  padding: 5rem 2rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.App {
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .book-list {
+    gap: 1rem;
+    justify-content: center;
+  }
+  .home-container, .browse-container, .addbook-container, .details-container, .notfound-container {
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .home-container, .browse-container, .addbook-container, .details-container, .notfound-container {
+    padding: 0.5rem;
+    max-width: 98vw;
+  }
+  .book-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .category-list {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

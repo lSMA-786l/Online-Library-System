@@ -1,0 +1,106 @@
+.addbook-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #111;
+  padding-top: 40px;
+}
+
+.addbook-title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.addbook-form {
+  background: #181818;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  padding: 32px 32px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 340px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.addbook-form-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.addbook-form input,
+.addbook-form textarea,
+.addbook-form select {
+  flex: 1 1 120px;
+  padding: 10px 12px;
+  border: 1.5px solid #ffd700;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.addbook-form input:focus,
+.addbook-form textarea:focus,
+.addbook-form select:focus {
+  border-color: #ffb700;
+}
+
+.addbook-form textarea {
+  min-height: 60px;
+  max-height: 120px;
+  resize: vertical;
+}
+
+.addbook-form label {
+  color: #ffd700;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.addbook-form button {
+  background: linear-gradient(90deg, #ffd700 60%, #bfa100 100%);
+  color: #111;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.addbook-form button:hover {
+  background: #fff200;
+  color: #000;
+}
+
+.error-msg {
+  color: #ff4d4f;
+  background: #222;
+  border-left: 4px solid #ff4d4f;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 600px) {
+  .addbook-form {
+    min-width: 90vw;
+    padding: 18px 8px 14px 8px;
+  }
+  .addbook-title {
+    font-size: 1.4rem;
+  }
+}

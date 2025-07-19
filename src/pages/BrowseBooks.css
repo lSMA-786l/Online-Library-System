@@ -1,0 +1,31 @@
+.browse-books-page {
+  padding: 2rem;
+}
+
+.category-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-nav a {
+  color: #2d3142;
+  background: #e0e0e0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.category-nav a.active-category,
+.category-nav a:hover {
+  background: #f67280;
+  color: #fff;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -1,0 +1,28 @@
+.book-details-page {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.book-details-page h1 {
+  color: #2d3142;
+}
+
+.back-btn {
+  margin-top: 2rem;
+  padding: 0.7rem 2rem;
+  background: #f67280;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #2d3142;
+}
